@@ -1,2 +1,2 @@
-require("ikawu.core.options")
+require("ikawu.core")
 require("ikawu.lazy")

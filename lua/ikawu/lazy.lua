@@ -11,4 +11,14 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("ikawu.plugins")
+vim.g.mapleader = " "
+
+require("lazy").setup({ { import = "ikawu.plugins" }, { import = "ikawu.plugins.lsp" } }, {
+  checker = {
+    enabled = true,
+    notify = false,
+  },
+  change_detection = {
+    notify = false,
+  },
+})
